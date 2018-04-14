@@ -4,13 +4,19 @@ function startTime() {
     var h = today.getHours();
     var m = today.getMinutes();
     var s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
+    h = bothDigits(h);
+    m = bothDigits(m);
+    s = bothDigits(s);
     document.getElementById('txt').innerHTML =
-    h + " " + m + " " + s;
+    "#" + h + m + s;
     var t = setTimeout(startTime, 500);
 }
-function checkTime(i) {
+function bothDigits(i) {
     if (i < 10) {i = "0" + i};  
     return i;
 }
+
+
+
+
+

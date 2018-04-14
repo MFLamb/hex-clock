@@ -1,1 +1,14 @@
- 
+body {
+    display: grid;
+    grid-template-rows: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    grid-template-columns: 1fr 20em 20em 20em 1fr;
+}
+
+#txt {
+    grid-column: 3;
+    width: 31%;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    justify-self: center;
+    font-size: 50px;
+}
